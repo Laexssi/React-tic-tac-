@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #root {
     width: 100%;
     display: flex;
@@ -20,10 +21,13 @@ button {
 button:focus {
     outline: 0;
 }
+=======
+>>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px; 
 }
+<<<<<<< HEAD
 .button {
     transition: 0.5s ease-in-out;
     border-radius: 5px;
@@ -69,10 +73,26 @@ display: flex;
    font-size: 14px;
     font-weight: bold;
     
+=======
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.board-row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+>>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
 }
 
 .square {
     background: #fff;
+<<<<<<< HEAD
     color: rgb(77, 77, 77);
     float: left;
     font-size: 64px;
@@ -84,23 +104,38 @@ display: flex;
     width:125px;
     box-sizing: border-box;
     transition: 1s;
+=======
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    height: 34px;
+    margin-right: -1px;
+    padding: 0;
+    text-align: center;
+    width:34px;
+>>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
 }
 
 .square:focus {
     outline: none;
 }
 
+<<<<<<< HEAD
 .square:nth-child(2) {
     border-right: 2px solid grey;
     border-left: 1px solid grey;
 }
 
+=======
+>>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
 .kbd-navigaton .square:focus {
     background: #ddd;
 }
 
 .game {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column;
     justify-content: center;
    align-items: center;
@@ -133,3 +168,7 @@ display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
 }
+=======
+    flex-direction: row;
+}
+>>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
