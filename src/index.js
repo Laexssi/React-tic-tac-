@@ -17,11 +17,7 @@ class Square extends React.Component {
 class Board extends React.Component {
 
     renderSquare(i) {
-<<<<<<< HEAD
        
-=======
-        console.log(i);
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
             return (
                 <Square 
                     value={this.props.squares[i]}
@@ -37,11 +33,7 @@ class Board extends React.Component {
         
 
         return (
-<<<<<<< HEAD
             <div className="board">
-=======
-            <div>
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
              
                 <div className="board-row">
                     {this.renderSquare(0)}
@@ -72,7 +64,6 @@ class Game extends React.Component {
             }],
             isXNext: true,
             stepNumber: 0,
-<<<<<<< HEAD
            
         };
        
@@ -84,27 +75,13 @@ class Game extends React.Component {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = [...current.squares]; 
-=======
-            
-        };
-    }
-    
-    handleClick(i) {
-        const history = this.state.history;
-        const current = history[history.length - 1];
-        const squares = [...current.squares];
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
         if ( checkWinner(squares) || squares[i]) {
             return
         } else {
         squares[i] = this.state.isXNext? "X": "O";
         this.setState({
-<<<<<<< HEAD
         history: [...history, ...[{squares: squares,
                                     latestSquareIndex: i}]], 
-=======
-        history: [...history, ...[{squares: squares}]], 
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
         isXNext: !this.state.isXNext,
         stepNumber: history.length});
         }
@@ -117,7 +94,6 @@ class Game extends React.Component {
         })
     }
 
-<<<<<<< HEAD
  
  
 
@@ -138,24 +114,10 @@ class Game extends React.Component {
                     className= {step === this.state.stepNumber? "button info-moves-button selected": 
                     "button info-moves-button"} 
                     onClick = {() => this.jumpTo(step)}>{stepDescription}</button>
-=======
-    render() {
-        const history = this.state.history;
-        const current = history[this.state.stepNumber];
-
-        const moves = history.map((squares, step) => {
-            const stepNumber = step ?
-            'Перейти к ходу № ' + step:
-            'К началу игры';
-            return (
-                <li key={step}>
-                    <button onClick = {() => this.jumpTo(step)}>{stepNumber}</button>
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
                 </li>
             );
         });
   
-<<<<<<< HEAD
         let status;
        
 
@@ -174,12 +136,6 @@ class Game extends React.Component {
                         onClick = {() => this.clearScores() }>Clear scores</button> */}
                 </div> 
            
-=======
-        let status = checkWinner(current.squares)? "Winner is " + (this.state.isXNext? "O": "X")
-        : "Next player: " + (this.state.isXNext? "X": "O");
-        return (
-            <div className="game">
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
                 <div className="game-board">
                     <Board 
                     squares={current.squares}
@@ -187,13 +143,8 @@ class Game extends React.Component {
                     />
                 </div>
                 <div className="game-info"> 
-<<<<<<< HEAD
                     <div className="status">{status}</div>
                     <ul>{moves}</ul>
-=======
-                    <div> {status}</div>
-                    <ol>{moves}</ol>
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
                 </div>
             </div>
         )
@@ -205,11 +156,8 @@ ReactDOM.render(
     document.getElementById("root")
 );
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
 function checkWinner(squares) {
     const lines = [
         [0,1,2],
@@ -224,13 +172,9 @@ function checkWinner(squares) {
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-<<<<<<< HEAD
           return {
              winner: squares[a]
             };
-=======
-          return squares[a];
->>>>>>> d7f112b43d861b4136b7ec0ddf868c3c75c48fc0
         }
       }
       return null;
