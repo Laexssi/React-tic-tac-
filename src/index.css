@@ -1,0 +1,135 @@
+#root {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px; 
+}
+.button {
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+.button:hover {
+  background-color: rgb(240, 233, 233);
+ 
+}
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  
+}
+
+.board-row {
+display: flex;
+ border-bottom: 2px solid grey; 
+}
+
+.board-row:nth-child(3) {
+    border: none;
+}
+
+/* .board-row::after {
+    clear: both;
+    content: "";
+    display: table;
+} */
+
+
+.status {
+    width: 50%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    border-top: 1px solid grey;
+    text-align: center;
+
+}
+
+.selected {
+   font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.square {
+    background: #fff;
+    color: rgb(77, 77, 77);
+    float: left;
+    font-size: 64px;
+    font-weight: 600;
+    height: 125px;
+    margin-right: -1px;
+    padding: 0;
+    text-align: center;
+    width:125px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.square:nth-child(2) {
+    border-right: 2px solid grey;
+    border-left: 1px solid grey;
+}
+
+.kbd-navigaton .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+    width: 375px;
+}
+
+.game-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    box-sizing: border-box;
+}
+
+.game-score {
+    font-size: 24px;
+    width: 50%;
+    text-align: center;
+  
+   
+    margin-bottom: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.score-button-reset {
+    width: 120px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
