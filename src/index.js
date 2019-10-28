@@ -107,7 +107,7 @@ class Game extends React.Component {
             const row = 1 + Math.floor(latestSquareIndex / 3)
             const stepDescription = step ?
             `Go to step №${step} at column #${col}, row #${row}`:
-            'To start';
+            'Go to start';
             return (
                 <li key={step}>
                     <button
