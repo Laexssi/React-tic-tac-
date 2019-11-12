@@ -107,8 +107,7 @@ class Game extends React.Component {
     const history = this.state.history;
 		const current = history[this.state.stepNumber];
 		const winnerObj = checkWinner(current.squares);
-		const isAscending = this.state.isAscending
-		console.log(history);
+		const isAscending = this.state.isAscending;
     const moves = history.map((squaresAndIndex, step) => {
       const latestSquareIndex = squaresAndIndex.latestSquareIndex;
       const col = 1 + (latestSquareIndex % 3);
@@ -131,6 +130,7 @@ class Game extends React.Component {
         </li>
       );
     });
+    console.log(moves);
 		if  (!isAscending) moves.reverse();
     let status;
 
@@ -147,7 +147,7 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-score">
-          X {this.xWins}:{this.oWins} O
+         Player X {this.xWins}:{this.oWins} Player O
           {/* <button className="button score-button-reset"
                         onClick = {() => this.clearScores() }>Clear scores</button> */}
         </div>
